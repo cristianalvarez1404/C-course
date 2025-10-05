@@ -2,15 +2,34 @@
 
 int main(){
 
-    int age = 0;
-    float gpa = 0.0f;
-    char grade = '\0';
-    char name[30] = "";
+  int dayOfWeek = 1;
+  
+  switch(dayOfWeek){
+    case 1:
+      printf("It is Monday");
+      break;
+    case 2:
+      printf("It is Tuesday");
+      break;
+    case 3:
+      printf("It is Wednesday");
+      break;
+    case 4:
+      printf("It is Thurday");
+      break;
+    case 5:
+      printf("It is Friday");
+      break;
+    case 6:
+      printf("It is Saturday");
+      break;
+    case 7:
+      printf("It is Sunday");
+      break;
+    default:
+      printf("Invalid");
+      break;
+  }
 
-    printf("%d\n", age);
-    printf("%f\n", gpa);
-    printf("%c\n", grade);
-    printf("%s\n", name);
-
-    return 0;
+  return 0;
 }
