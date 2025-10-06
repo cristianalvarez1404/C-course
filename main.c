@@ -1,35 +1,27 @@
 #include <stdio.h>
+#include <string.h>
+
+void happyBirthday(char name[], int age){
+    printf("\nHappy birthday to you!");
+    printf("\nHappy birthday to you!");
+    printf("\nHappy birthday dear %s!", name);
+    printf("\nHappy birthday to you!");
+    printf("\nYou are %d years old!\n", age);
+}
 
 int main(){
 
-  int dayOfWeek = 1;
-  
-  switch(dayOfWeek){
-    case 1:
-      printf("It is Monday");
-      break;
-    case 2:
-      printf("It is Tuesday");
-      break;
-    case 3:
-      printf("It is Wednesday");
-      break;
-    case 4:
-      printf("It is Thurday");
-      break;
-    case 5:
-      printf("It is Friday");
-      break;
-    case 6:
-      printf("It is Saturday");
-      break;
-    case 7:
-      printf("It is Sunday");
-      break;
-    default:
-      printf("Invalid");
-      break;
-  }
+    char name[50] = "";
+    int age = 0;
 
-  return 0;
+    printf("Enter your name: ");
+    fgets(name, sizeof(name), stdin);
+    name[strlen(name) - 1] = '\0';
+    
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    happyBirthday(name,age);
+
+    return 0;
 }
