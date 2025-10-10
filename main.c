@@ -1,24 +1,32 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int main(){
+  //ternary operator ? = Shorthand for if-else statments
 
-  int numbers[] = {10, 20, 30, 40, 50};
-  char grades[] = {'A', 'B', 'C', 'D', 'F'};
-  char name[] = "Coding";
+  // int x = 5;
+  // int y = 6;
+  // int max = (x > y) ? x : y;
 
-  numbers[0] = 100;
-  numbers[1] = 90;
-  numbers[2] = 80;
-  numbers[3] = 70;
-  numbers[4] = 60;
+  // printf("%d", max);
 
-  int size = sizeof(numbers) / sizeof(numbers[0]);
+  // bool isOnline = true;
 
-  for(int i = 0; i < size ; i++){
-    printf("%c ", grades[i]);
-  }
+  // printf("%s", (isOnline) ? "online" : "offline");
 
-  printf("%d", sizeof(numbers));
+  // int number = 8;
+
+  // printf("%d is %s", number, (number % 2 == 0 ? "even" : "odd"));
+
+  // int age = 21;
+
+  // printf("%s", (age > 18) ? "adult" : "child");
+
+  int hours = 11;
+  int minutes = 3;
+  char *meridiem =  (hours < 12) ? "AM" : "PM";
+
+  printf("%02d:%02d %s", hours, minutes, meridiem);
 
   return 0;
 }
